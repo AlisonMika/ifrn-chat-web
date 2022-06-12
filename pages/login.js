@@ -14,7 +14,7 @@ const Login = props => {
       <main>
         <nav>
           <p>Chat de Infoweb</p>
-          <button onClick={() => router.back()}>voltar</button>
+          <button onClick={event => router.back()}>voltar</button>
         </nav>
         <AppContainer>
           <AppInput label="Usuário" title="apelido ou email do usuário"/>

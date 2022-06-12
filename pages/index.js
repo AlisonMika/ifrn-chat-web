@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-export default function Home() {
+export default function Home () {
   return (
     <div>
       <Head>
@@ -13,10 +13,10 @@ export default function Home() {
       <main>
         <nav>
           <p>Chat de Infoweb</p>
-          <Link href="/login"><button>login</button></Link>
+          <Link href="/login"><a>login</a></Link>
         </nav>
         <h1>Landing page do chat de Infoweb</h1>
       </main>
     </div>
-  )
+  );
 }
