@@ -5,15 +5,17 @@ import {useRouter} from 'next/router';
 import Fingerprint from '@mui/icons-material/Fingerprint';
 import HomeIcon from '@mui/icons-material/Home';
 
-import {AppButton, AppContainer, AppInput} from '../src/components';
-import { Grid } from '@mui/material';
+import {AppButton, AppContainer, AppInput} from '../components';
+// import AppButton from '../src/components/AppButton';
+// import AppContainer from "../src/components/AppContainer";
+// import AppInput from '../src/components/AppInput';
 
-const Login = props => {
+const Login = (props: any) => {
   const router = useRouter ();
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleChangeName = (event) => {
+  const handleChangeName = (event: any) => {
     setName(event.target.value);
   }
 
@@ -34,10 +36,10 @@ const Login = props => {
             label="Senha" 
             type="password" 
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(e: any) => setPassword(e.target.value)}
           />
           <AppButton 
-            onClick={event => router.back ()}
+            onClick={(event: any) => router.back ()}
             label="voltar"
             variant="outlined"
             color="secondary"
