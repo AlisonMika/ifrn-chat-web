@@ -9,11 +9,14 @@ import {AppButton, AppContainer, AppInput} from '../components';
 // import AppButton from '../src/components/AppButton';
 // import AppContainer from "../src/components/AppContainer";
 // import AppInput from '../src/components/AppInput';
+import { useAuth } from '../hooks/useAuth';
 
 const Login = (props: any) => {
   const router = useRouter ();
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
+
+  const { login } = useAuth()
 
   const handleChangeName = (event: any) => {
     setName(event.target.value);
@@ -51,6 +54,7 @@ const Login = (props: any) => {
             variant='contained'
             disabled={!(!!name && !!password)}
             endIcon={<Fingerprint />}
+            onClick={() => login({ name })}
           />
         </AppContainer>
       </main>
